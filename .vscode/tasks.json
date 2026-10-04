@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Egg Drop Lab executable",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"build_exe.bat"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Remove generated build files",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Remove-Item -LiteralPath '.build-work','.build-spec','_builder_build','_builder_spec' -Recurse -Force; Remove-Item -LiteralPath '.vscode\\tasks.json' -Force"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

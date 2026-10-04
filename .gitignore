@@ -1,0 +1,8 @@
+/.build-work/
+/.build-spec/
+/_builder_build/
+/_builder_spec/
+/build/
+/dist/
+__pycache__/
+*.py[cod]
